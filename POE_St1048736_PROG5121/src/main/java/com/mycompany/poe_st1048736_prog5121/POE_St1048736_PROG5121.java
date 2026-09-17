@@ -11,6 +11,8 @@ package com.mycompany.poe_st1048736_prog5121;
 public class POE_St1048736_PROG5121 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Login login = new Login();
+        boolean result = login.checkUserName("kyl_1");
+        System.out.println(result);
     }
 }
