@@ -1,4 +1,3 @@
-# POE_St1048736_PROG5121
 # POE_St1048736_PROG5121 — Chat App (Part 1: Registration & Login)
 
 ## Description
