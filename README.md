@@ -23,3 +23,20 @@ input validation, using Java.
 - Git & GitHub (for version control)
 
 ## Project Structure
+
+
+## How to Run
+1. Open the project in NetBeans (or any IDE with Maven support).
+2. Run `POE_St1048736_PROG5121.java` to see example usage in the console.
+3. Run `LoginTest.java` (Ctrl+F6 in NetBeans) to execute the full JUnit test suite.
+
+## Testing
+All six core methods are covered by JUnit tests, using test data provided in the assignment
+brief. All tests currently pass.
+
+## Regex Reference
+The cell phone number validation regex pattern was informed by the Oracle Java Regex Tutorial:
+https://docs.oracle.com/javase/tutorial/essential/regex/
+
+## Author
+Kganya — Student Number: St1048736
