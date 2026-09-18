@@ -19,7 +19,13 @@ public class POE_St1048736_PROG5121 {
         boolean result2 = login.checkCellPhoneNumber("+27838968976");
         System.out.println(result2);
 
-        String result3 = login.registerUser("kyl_1", "Ch&&sec@ke99!", "+27838968976");
+        String result3 = login.registerUser("kyl_1", "Ch&&sec@ke99!", "+27838968976", "Kyle", "Test");
         System.out.println(result3);
+
+        boolean loginResult = login.loginUser("kyl_1", "Ch&&sec@ke99!");
+        System.out.println(loginResult);
+
+        String statusMessage = login.returnLoginStatus(loginResult, "Kyle", "Test");
+        System.out.println(statusMessage);
     }
 }

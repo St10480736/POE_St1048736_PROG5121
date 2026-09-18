@@ -14,6 +14,8 @@ public class Login {
     private String storedUsername;
     private String storedPassword;
     private String storedCellNumber;
+    private String storedFirstName;
+    private String storedLastName;
 
     public boolean checkUserName(String username) {
         boolean hasUnderscore = username.contains("_");
@@ -53,7 +55,7 @@ public class Login {
         return cellNumber.matches(pattern);
     }
 
-    public String registerUser(String username, String password, String cellNumber) {
+    public String registerUser(String username, String password, String cellNumber, String firstName, String lastName) {
         if (!checkUserName(username)) {
             return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.";
         }
@@ -70,16 +72,22 @@ public class Login {
         storedUsername = username;
         storedPassword = password;
         storedCellNumber = cellNumber;
+        storedFirstName = firstName;
+        storedLastName = lastName;
 
         return "User successfully registered.";
     }
 
     public boolean loginUser(String username, String password) {
-        return false;
+        return username.equals(storedUsername) && password.equals(storedPassword);
     }
 
     public String returnLoginStatus(boolean loginSuccess, String firstName, String lastName) {
-        return "";
+        if (loginSuccess) {
+            return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
+        } else {
+            return "Username or password incorrect, please try again.";
+        }
     }
 
 }
