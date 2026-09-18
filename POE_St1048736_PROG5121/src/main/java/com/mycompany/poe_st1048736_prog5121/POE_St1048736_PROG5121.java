@@ -12,7 +12,14 @@ public class POE_St1048736_PROG5121 {
 
     public static void main(String[] args) {
         Login login = new Login();
+
         boolean result = login.checkUserName("kyl_1");
         System.out.println(result);
+
+        boolean result2 = login.checkCellPhoneNumber("+27838968976");
+        System.out.println(result2);
+
+        String result3 = login.registerUser("kyl_1", "Ch&&sec@ke99!", "+27838968976");
+        System.out.println(result3);
     }
 }
